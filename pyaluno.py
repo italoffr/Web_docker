@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_DATABASE_USER'] = 'root' # qual é o usuario padrão
 app.config['MYSQL_DATABASE_PASSWORD'] = 'mudar123' # qual é a senha
-app.config['MYSQL_DATABASE_DB'] = 'use teste' # qual é o nome do banco de dados
+app.config['MYSQL_DATABASE_DB'] = 'teste' # qual é o nome do banco de dados
 app.config['MYSQL_DATABASE_HOST'] = '172.17.0.2' # ip do banco de dados
 mysql.init_app(app) # vinculação do bando de dados com a aplicação, sendo que o 'mysql' setou com os parametros passado
 
