@@ -23,7 +23,7 @@ def salvando():
     if no_prod and pr_prod and ca_prod:
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute('INSERT INTO TB_PRODUTO (NOME_PRO, PRECO_PRO, CATEGORIA_PRO) VALUES(%s, %d, %s)',(no_prod, pr_prod, ca_prod))
+        cursor.execute('INSERT INTO TB_PRODUTO (NOME_PRO, PRECO_PRO, CATEGORIA_PRO) VALUES(%s, %s, %s)',(no_prod, pr_prod, ca_prod))
         conn.commit()
     return render_template('cadproduto.html')
 
