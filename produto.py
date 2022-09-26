@@ -12,11 +12,11 @@ app.config['MYSQL_DATABASE_HOST'] = '172.17.0.2'
 mysql.init_app(app)
 
 @app.route('/')
-def cadastrando_info_aluno():
+def cadastro_produto():
     return render_template('cadproduto.html')
 
 @app.route('/cdproduto', methods = ['POST', 'GET'])
-def salvando():
+def castro_pro():
     no_prod = request.form['NomeProd']
     pr_prod= request.form['PrecoProd']
     ca_prod = request.form['CateProd']
