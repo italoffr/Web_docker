@@ -27,6 +27,15 @@ def castro_pro():
         conn.commit()
     return render_template('cadproduto.html')
 
+@app.route('/infopro', methods = ['POST', 'GET'])
+def listapro():
+     conn = mysql.connect()
+     cursor = conn.cursor()
+     cursor.execute('SELECT NOME_PRO, PRECO_PRO, CATEGORIA_PRO FROM TB_PRODUTO')
+     data = cursor.fetchall() # faz a recuperação de dados
+     conn.commit()
+     return render_template('cadprodutos.html', datas=data)
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5001))
     app.run(host='0.0.0.0', port=port)
